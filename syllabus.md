@@ -53,6 +53,8 @@ R for Data Science. Hadley Wickham and Garrett Grolemund. 2016. free online at h
 
 Data Science from Scratch. Joel Grus. 2015. O’Reilly Media. (available free online via the library and Safari Books)
 
+The Practice of Reproducible Research. Justin Kitzes, Daniel Turek, Fatma Deniz (Eds.) 2017. https://www.practicereproducibleresearch.org/ UC Press
+
 **Interesting supplementary reads**
 
 Data Science at the Command Line. Jeroen Janssens. 2014. O'Reilly Media.
@@ -82,7 +84,7 @@ Note: Updated Feb 13, 2017 - Still subject to change
 | 5 (2/20)   | Data organization and management| Intro to R and RStudio| Buffalo Ch. 8 ||
 |    | Functions|R|Buffalo Ch. 8||
 ||Data visualization for exploration| R: graphing| Buffalo Ch. 8 | |
-| 6 (2/27)   | R Markdown and making projects | R| Buffalo Ch. 8 |Graphing project|
+| 6 (2/27)   | R Markdown and making projects | R| Kitzes et al. P1 |Graphing project|
 | 7 (3/6) |
 | 8 (3/20)   | Scripting| R| Buffalo Ch. 8 | Complete data analysis    |
 | 9 (3/27)   | Intro to python| python| Grus Ch. 2    |                           |
