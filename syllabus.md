@@ -71,7 +71,7 @@ Mac, Linux, or Windows laptop (not a tablet, Chromebook, etc.) with administrati
 
 **Meeting Schedule**
 
-Note: Updated Feb 13, 2017 - Still subject to change
+Note: Updated Feb 27, 2017 - Still subject to change
 
 | Week | Topic                                    | Process                           | Readings      | Assignment                |
 | ---- | ------------ | ---------- | ------------- | ---- |
