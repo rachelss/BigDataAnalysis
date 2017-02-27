@@ -1,194 +1,52 @@
 <!doctype html>
 <html>
 <head>
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>syllabus.md</title><link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'><style type='text/css'>html, body {overflow-x: initial !important;}html { font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
-a:active, a:hover { outline: 0px; }
-.in-text-selection, ::selection { background-color: rgb(181, 214, 252); text-shadow: none; background-position: initial initial; background-repeat: initial initial; }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap; overflow-x: auto; }
-.for-image #write { padding-left: 8px; padding-right: 8px; }
-body.typora-export { padding-left: 30px; padding-right: 30px; }
-@media screen and (max-width: 500px) { 
-  body.typora-export { padding-left: 0px; padding-right: 0px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
 }
-.typora-export #write { margin: 0px auto; }
-#write > p:first-child, #write > ul:first-child, #write > ol:first-child, #write > pre:first-child, #write > blockquote:first-child, #write > div:first-child, #write > table:first-child { margin-top: 30px; }
-#write li > table:first-child { margin-top: -20px; }
-img { max-width: 100%; vertical-align: middle; }
-input, button, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; line-height: inherit; }
-input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
-::before, ::after, * { box-sizing: border-box; }
-#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write div, #write pre { width: inherit; }
-#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.8rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.4rem; }
-h5 { font-size: 1.2rem; }
-h6 { font-size: 1rem; }
-p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
-.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0rem; -webkit-margin-after: 0rem; }
-.hidden { display: none; }
-.md-blockmeta { color: rgb(204, 204, 204); font-weight: bold; font-style: italic; }
-a { cursor: pointer; }
-#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; margin: 4px 0px 0px; }
-tr { page-break-inside: avoid; page-break-after: auto; }
-thead { display: table-header-group; }
-table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; page-break-inside: auto; text-align: left; }
-table.md-table td { min-width: 80px; }
-.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
-.CodeMirror { text-align: left; }
-.CodeMirror-placeholder { opacity: 0.3; }
-.CodeMirror pre { padding: 0px 4px; }
-.CodeMirror-lines { padding: 0px; }
-div.hr:focus { cursor: none; }
-pre { white-space: pre-wrap; }
-.CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; page-break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
-.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
-.md-fences .CodeMirror.CodeMirror-wrap { top: -1.6em; margin-bottom: -1.6em; }
-.md-fences.mock-cm { white-space: pre-wrap; }
-.show-fences-line-number .md-fences { padding-left: 0px; }
-.show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
-.footnotes { opacity: 0.8; font-size: 0.9rem; padding-top: 1em; padding-bottom: 1em; }
-.footnotes + .footnotes { margin-top: -1em; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background-color: transparent; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: normal; text-align: left; box-sizing: content-box; direction: ltr; background-position: initial initial; background-repeat: initial initial; }
-li div { padding-top: 0px; }
-blockquote { margin: 1rem 0px; }
-li p, li .mathjax-block { margin: 0.5rem 0px; }
-li { margin: 0px; position: relative; }
-blockquote > :last-child { margin-bottom: 0px; }
-blockquote > :first-child { margin-top: 0px; }
-.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; }
-@media print { 
-  html, body { height: 100%; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
-  h1, h2, h3, h4, h5, h6 { page-break-after: avoid; orphans: 2; }
-  p { orphans: 4; }
-  html.blink-to-pdf { font-size: 13px; }
-  .typora-export #write { padding-left: 1cm; padding-right: 1cm; }
-  .typora-export #write::after { height: 0px; }
-  @page { margin: 20mm 0mm; }
-}
-.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
-a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 2.86rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
-p .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
-#write .MathJax_Display { margin: 0.8em 0px 0px; }
-.mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
-p + .mathjax-block { margin-top: -1.143rem; }
-.mathjax-block:not(:empty)::after { display: none; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: none; box-shadow: none; }
-.task-list { list-style-type: none; }
-.task-list-item { position: relative; padding-left: 1em; }
-.task-list-item input { position: absolute; top: 0px; left: 0px; }
-.math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
-.md-toc-content { position: relative; margin-left: 0px; }
-.md-toc::after, .md-toc-content::after { display: none; }
-.md-toc-item { display: block; color: rgb(65, 131, 196); text-decoration: none; }
-.md-toc-inner:hover { }
-.md-toc-inner { display: inline-block; cursor: pointer; }
-.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: bold; }
-.md-toc-h2 .md-toc-inner { margin-left: 2em; }
-.md-toc-h3 .md-toc-inner { margin-left: 4em; }
-.md-toc-h4 .md-toc-inner { margin-left: 6em; }
-.md-toc-h5 .md-toc-inner { margin-left: 8em; }
-.md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) { 
-  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
-  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
-  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
-  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
-}
-a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
-.footnote-line a:not(.reversefootnote) { color: inherit; }
-.md-attr { display: none; }
-.md-fn-count::after { content: '.'; }
-.md-tag { opacity: 0.5; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: monospace; }
-code { text-align: left; }
-h1 .md-tag, h2 .md-tag, h3 .md-tag, h4 .md-tag, h5 .md-tag, h6 .md-tag { font-weight: initial; opacity: 0.35; }
-a.md-print-anchor { border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: none !important; background-color: transparent !important; text-shadow: initial !important; background-position: initial initial !important; background-repeat: initial initial !important; }
-.md-inline-math .MathJax_SVG .noError { display: none !important; }
-.mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0em; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; display: block !important; }
-.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
-.MathJax_SVG .MJX-monospace { font-family: monospace; }
-.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: normal; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
-.MathJax_SVG * { -webkit-transition: none; transition: none; }
-
-
-@include-when-export url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
-
-/**
- * css forked from https://github.com/GitbookIO/gitbook 
- * www.gitbook.com
- * Apache License
- * https://github.com/GitbookIO/gitbook/blob/master/LICENSE
- **/
-
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Open Sans Regular'),url('file:///Users/rachelschwartz/Library/Application%20Support/abnerworks.Typora/themes/github/400.woff') format('woff')
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    font-style: italic;
-    font-weight: normal;
-    src: local('Open Sans Italic'),url('file:///Users/rachelschwartz/Library/Application%20Support/abnerworks.Typora/themes/github/400i.woff') format('woff')
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: bold;
-    src: local('Open Sans Bold'),url('file:///Users/rachelschwartz/Library/Application%20Support/abnerworks.Typora/themes/github/700.woff') format('woff')
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    font-style: italic;
-    font-weight: bold;
-    src: local('Open Sans Bold Italic'),url('file:///Users/rachelschwartz/Library/Application%20Support/abnerworks.Typora/themes/github/700i.woff') format('woff')
-}
-
-html {
-    font-size: 16px;
-}
-
 body {
-    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: rgb(51, 51, 51);
-    line-height: 1.6;
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
 }
 
-#write{
-    max-width: 860px;
-  	margin: 0 auto;
-  	padding: 20px 30px 40px 30px;
-	padding-top: 20px;
-    padding-bottom: 100px;
-}
-#write > ul:first-child,
-#write > ol:first-child{
-    margin-top: 30px;
-}
-
-body > *:first-child {
-    margin-top: 0 !important;
-}
-body > *:last-child {
-    margin-bottom: 0 !important;
-}
 a {
-    color: #4183C4;
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
 }
 h1,
 h2,
@@ -196,336 +54,333 @@ h3,
 h4,
 h5,
 h6 {
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    line-height: 1.4;
-    cursor: text;
-}
-h1:hover a.anchor,
-h2:hover a.anchor,
-h3:hover a.anchor,
-h4:hover a.anchor,
-h5:hover a.anchor,
-h6:hover a.anchor {
-    /*background: url("file:///Users/rachelschwartz/Library/Application%20Support/images/modules/styleguide/para.png") no-repeat 10px center;*/
-    text-decoration: none;
-}
-h1 tt,
-h1 code {
-    font-size: inherit;
-}
-h2 tt,
-h2 code {
-    font-size: inherit;
-}
-h3 tt,
-h3 code {
-    font-size: inherit;
-}
-h4 tt,
-h4 code {
-    font-size: inherit;
-}
-h5 tt,
-h5 code {
-    font-size: inherit;
-}
-h6 tt,
-h6 code {
-    font-size: inherit;
+    color: #404040;
+    line-height: 36px;
 }
 h1 {
-    padding-bottom: .3em;
-    font-size: 2.25em;
-    line-height: 1.2;
-    border-bottom: 1px solid #eee;
+    margin-bottom: 18px;
+    font-size: 30px;
 }
 h2 {
-   padding-bottom: .3em;
-    font-size: 1.75em;
-    line-height: 1.225;
-    border-bottom: 1px solid #eee;
+    font-size: 24px;
 }
 h3 {
-    font-size: 1.5em;
-    line-height: 1.43;
+    font-size: 18px;
 }
 h4 {
-    font-size: 1.25em;
+    font-size: 16px;
 }
 h5 {
-    font-size: 1em;
+    font-size: 14px;
 }
 h6 {
-   font-size: 1em;
-    color: #777;
-}
-p,
-blockquote,
-ul,
-ol,
-dl,
-table{
-    margin: 0.8em 0;
-}
-li>ol,
-li>ul {
-    margin: 0 0;
+    font-size: 13px;
 }
 hr {
-    height: 4px;
-    padding: 0;
-    margin: 16px 0;
-    background-color: #e7e7e7;
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
-    border-bottom: 1px solid #ddd;
-}
-
-body > h2:first-child {
-    margin-top: 0;
-    padding-top: 0;
-}
-body > h1:first-child {
-    margin-top: 0;
-    padding-top: 0;
-}
-body > h1:first-child + h2 {
-    margin-top: 0;
-    padding-top: 0;
-}
-body > h3:first-child,
-body > h4:first-child,
-body > h5:first-child,
-body > h6:first-child {
-    margin-top: 0;
-    padding-top: 0;
-}
-a:first-child h1,
-a:first-child h2,
-a:first-child h3,
-a:first-child h4,
-a:first-child h5,
-a:first-child h6 {
-    margin-top: 0;
-    padding-top: 0;
-}
-h1 p,
-h2 p,
-h3 p,
-h4 p,
-h5 p,
-h6 p {
-    margin-top: 0;
-}
-li p.first {
-    display: inline-block;
-}
-ul,
-ol {
-    padding-left: 30px;
-}
-ul:first-child,
-ol:first-child {
-    margin-top: 0;
-}
-ul:last-child,
-ol:last-child {
-    margin-bottom: 0;
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
 }
 blockquote {
-    border-left: 4px solid #dddddd;
-    padding: 0 15px;
-    color: #777777;
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
 }
-blockquote blockquote {
-    padding-right: 0;
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
 }
-table {
-    padding: 0;
-    word-break: initial;
-}
-#write {
-    overflow-x: auto;
-}
-table tr {
-    border-top: 1px solid #cccccc;
-    background-color: white;
-    margin: 0;
-    padding: 0;
-}
-table tr:nth-child(2n) {
-    background-color: #f8f8f8;
-}
-table tr th {
-    font-weight: bold;
-    border: 1px solid #cccccc;
-    text-align: left;
-    margin: 0;
-    padding: 6px 13px;
-}
-table tr td {
-    border: 1px solid #cccccc;
-    text-align: left;
-    margin: 0;
-    padding: 6px 13px;
-}
-table tr th:first-child,
-table tr td:first-child {
-    margin-top: 0;
-}
-table tr th:last-child,
-table tr td:last-child {
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
     margin-bottom: 0;
+    font-style: italic;
 }
-
-.CodeMirror-gutters {
-    border-right: 1px solid #ddd;
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
 }
-
-.md-fences,
-code,
-tt {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
     border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
     padding: 0;
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
 }
-
-.md-fences {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding: 0.2em 1em;
-    padding-top: 8px;
-    padding-bottom: 6px;
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
 }
-.task-list{
-	padding-left: 0;
+* {
+	-webkit-print-color-adjust: exact;
 }
-
-.task-list-item {
-	padding-left:32px;
-}
-
-.task-list-item input {
-  top: 3px;
-  left: 8px;
-}
-
 @media screen and (min-width: 914px) {
-    /*body {
+    body {
         width: 854px;
-        margin: 0 auto;
-    }*/
+        margin:10px auto;
+    }
 }
 @media print {
-    html {
-        font-size: 13px;
-    }
-    table,
-    pre {
-        page-break-inside: avoid;
-    }
-    pre {
-        word-wrap: break-word;
-    }
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
 }
-
-.md-fences {
-	background-color: #f8f8f8;
-}
-#write pre.md-meta-block {
-	padding: 1rem;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #f7f7f7;
-    border: 0;
-    border-radius: 3px;
-    color: #777777;
-    margin-top: 0 !important;
-}
-
-.mathjax-block>.code-tooltip {
-	bottom: .375rem;
-}
-
-#write>h3.md-focus:before{
-	left: -1.5625rem;
-	top: .375rem;
-}
-#write>h4.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h5.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h6.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-.md-image>.md-meta {
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
-    color: inherit;
-}
-
-.md-tag{
-	color: inherit;
-}
-
-.md-toc { 
-    margin-top:20px;
-    padding-bottom:20px;
-}
-
-#typora-quick-open {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
-}
-
-#typora-quick-open-item {
-    background-color: #FAFAFA;
-    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
-    border-style: solid;
-    border-width: 1px;
-}
-
-#md-notification:before {
-    top: 10px;
-}
-
-/** focus mode */
-.on-focus-mode blockquote {
-    border-left-color: rgba(85, 85, 85, 0.12);
-}
-
-header, .context-menu, .megamenu-content, footer{
-    font-family: "Segoe UI", "Arial", sans-serif;
-}
-
-
 </style>
+<title>**University of Rhode Island**  
+**Department of Biological Sciences**  
+**College of the Environment and Life Sciences</title>
+
 </head>
-<body class='typora-export' >
-<div  id='write'  class = 'is-mac'><p><strong>University of Rhode Island</strong><br/>
+<body>
+<p><strong>University of Rhode Island</strong><br/>
 <strong>Department of Biological Sciences</strong><br/>
 <strong>College of the Environment and Life Sciences</strong><br/>
 <strong>BIO 439X/594-14</strong><br/>
 <strong>Big Data Analysis</strong><br/>
-<strong>Spring 2017</strong></p><p><strong>Instructor</strong>: Dr. Rachel Schwartz</p><p><strong>Office Location</strong>: CBLS 377</p><p><strong>Telephone</strong>: 4-5404</p><p><strong>Email</strong>: <a href='mailto:rsschwartz@uri.edu' target='_blank' >rsschwartz@uri.edu</a><br/>
-Please note that I will do my best to respond promptly between 9-5 on weekdays.</p><p><strong>Office Hours</strong>: Friday 12-2pm CBLS 252<br/>
-Please feel free to come by without an appointment during this time. To talk with me during other times please set up a meeting by email.</p><p><strong>Class Days / Time</strong>: T/Th 1:30-2:45pm</p><p><strong>Classroom</strong>: Coastal Institute 117A</p><p><strong>Prerequisites</strong>: Graduate standing (BIO594) or junior standing (BIO439X) or instructor permission.</p><p><strong>Course Description</strong>: This course is intended to help you learn how to analyze large datasets correctly and efficiently. We will discuss methods for analysis of big data, and how to getresearch done more efficiently using basic scientific computing skills. This course will consist of limited lecture time and extensive hands-on time. We will cover data management, statistical methods, task automation, and how to make data analysis clear and reproducible. No prior programming experience is required. Although most of the data will be biological orenvironmental, the material learned will be fully translatable to other fields.</p><p><strong>Course Goals</strong>:</p><p>At the end of this course students should be able to...<br/></p><ul><li>understand methods to analyze large datasets and how they differ from analysis of smaller datasets.</li><li>be able to effectively manage and analyze data.<br/></li><li>be able to apply the tools learned in class to research.</li></ul><p><strong>Student Learning Outcomes</strong>:</p><p>At the end of this course students enrolled in both courses should be able to...</p><ul><li>write a script to visualize a dataset.</li><li>select appropriate statistical methods to produce unbiased results for a dataset.</li><li>document code so that it is readable to someone else.</li></ul><p>Students enrolled in BIO594 should also be able to...</p><ul><li>produce a completely replicable analysis associated with a research project.</li></ul><p><strong>Required text</strong></p><p>Bioinformatics Data Skills. Vince Buffalo. 2015. O&#39;Reilly Media.</p><p>R for Data Science. Hadley Wickham and Garrett Grolemund. 2016. free online at <a href='http://r4ds.had.co.nz/' target='_blank' >http://r4ds.had.co.nz/</a></p><p>Data Science from Scratch. Joel Grus. 2015. O’Reilly Media. (available free online via the library and Safari Books)</p><p><strong>Interesting supplementary reads</strong></p><p>Data Science at the Command Line. Jeroen Janssens. 2014. O&#39;Reilly Media.</p><p>Python Data Science Handbook. Jake VanderPlas. 2015. O’Reilly Media.</p><p>Doing Data Science. Rachel Schutt and Cathy O&#39;Neill. 2013. O&#39;Reilly Media.</p><p>On Being a Data Skeptic. Cathy O&#39;Neil. 2013. O&#39;Reilly Media.</p><p><strong>Other equipment / material requirements</strong></p><p>Mac, Linux, or Windows laptop (not a tablet, Chromebook, etc.) with administrative privileges. Please contact the instructor if you do not have a laptop and purchasing one would be a financial difficulty.</p><p><strong>Meeting Schedule</strong></p><p>Note: Updated Feb 13, 2017 - Still subject to change</p><table><thead><tr><th>Week</th><th>Topic</th><th>Process</th><th>Readings</th><th>Assignment</th></tr></thead><tbody><tr><td>1</td><td>Introduction / Software installation</td><td></td><td></td><td></td></tr><tr><td></td><td>Automating repetitive tasks</td><td>Intro to the command line</td><td>Buffalo Ch. 3</td><td></td></tr><tr><td>2</td><td>Automating repetitive tasks</td><td>Shell scripts</td><td>Buffalo Ch. 7</td><td>Commenting a shell script</td></tr><tr><td>3</td><td>Big data and answerable questions</td><td>Discussion of your research</td><td>Buffalo Ch. 1</td><td></td></tr><tr><td></td><td>High performance computing</td><td>Intro to the cluster</td><td>Buffalo Ch. 4</td><td></td></tr><tr><td>4</td><td>Sharing, collaboration, and research transparancy</td><td>Git</td><td>Buffalo Ch. 5</td><td>Share your git repo</td></tr><tr><td>5</td><td>Data organization and management</td><td>Intro to R and RStudio</td><td>Buffalo Ch. 8</td><td></td></tr><tr><td>6</td><td>Data visualization for exploration</td><td>R: graphing</td><td>Buffalo Ch. 8</td><td>Graphing script</td></tr><tr><td>7</td><td>Functions</td><td>R</td><td>Buffalo Ch. 8</td><td></td></tr><tr><td>8</td><td>Scripting</td><td>R</td><td>Buffalo Ch. 8</td><td>Complete data analysis</td></tr><tr><td>9</td><td>Intro to python</td><td>python</td><td>Grus Ch. 2</td><td></td></tr><tr><td>10</td><td>Packaging complex data</td><td>python classes &amp; databases</td><td></td><td></td></tr><tr><td>11</td><td>Making sure it&#39;s right</td><td>try/except, assertions, and tests</td><td></td><td>Complete data analysis</td></tr><tr><td>12</td><td>Things not covered: pandas, matplotlib, machine learning, make</td><td></td><td></td><td></td></tr><tr><td>13</td><td>Appropriate analyses and statistics</td><td></td><td>Kumar et al.</td><td></td></tr></tbody></table><p><strong>Assignments and Grading Policy</strong></p><p>There will be five assignments during the course of the semester.  Each assignment will focus on the skill learned in class during the week and build on skills and concepts learned in previous weeks. These assignments will be initiated in class and are due at the end of the following week. </p><p>For each assignment you will earn points. The more points you have earned, the more you have learned. Your grade will be based on the total number of points you accumulate during the semester. Assignments will be worth a total of 500 points. Students in BIO594 will also do a cummulative project involving two of the following: (1) a detailed written proposal on research involving big data, (2) analysis of research data, (3) a ~1000 word paper on your research using data, and/or (4) a poster of your research with data. The project will be worth 500 points.</p><p>Grading for BIO594<br/>
+<strong>Spring 2017</strong></p>
+
+<p><strong>Instructor</strong>: Dr. Rachel Schwartz</p>
+
+<p><strong>Office Location</strong>: CBLS 377</p>
+
+<p><strong>Telephone</strong>: 4-5404</p>
+
+<p><strong>Email</strong>: rsschwartz@uri.edu<br/>
+Please note that I will do my best to respond promptly between 9-5 on weekdays.</p>
+
+<p><strong>Office Hours</strong>: Friday 12-2pm CBLS 252<br/>
+Please feel free to come by without an appointment during this time. To talk with me during other times please set up a meeting by email.</p>
+
+<p><strong>Class Days / Time</strong>: T/Th 1:30-2:45pm</p>
+
+<p><strong>Classroom</strong>: Coastal Institute 117A</p>
+
+<p><strong>Prerequisites</strong>: Graduate standing (BIO594) or junior standing (BIO439X) or instructor permission.</p>
+
+<p><strong>Course Description</strong>: This course is intended to help you learn how to analyze large datasets correctly and efficiently. We will discuss methods for analysis of big data, and how to getresearch done more efficiently using basic scientific computing skills. This course will consist of limited lecture time and extensive hands-on time. We will cover data management, statistical methods, task automation, and how to make data analysis clear and reproducible. No prior programming experience is required. Although most of the data will be biological orenvironmental, the material learned will be fully translatable to other fields.</p>
+
+<p><strong>Course Goals</strong>:</p>
+
+<p>At the end of this course students should be able to...</p>
+
+<ul>
+<li>understand methods to analyze large datasets and how they differ from analysis of smaller datasets.</li>
+<li>be able to effectively manage and analyze data.</li>
+<li>be able to apply the tools learned in class to research.</li>
+</ul>
+
+
+<p><strong>Student Learning Outcomes</strong>:</p>
+
+<p>At the end of this course students enrolled in both courses should be able to...</p>
+
+<ul>
+<li>write a script to visualize a dataset.</li>
+<li>select appropriate statistical methods to produce unbiased results for a dataset.</li>
+<li>document code so that it is readable to someone else.</li>
+</ul>
+
+
+<p>Students enrolled in BIO594 should also be able to...</p>
+
+<ul>
+<li>produce a completely replicable analysis associated with a research project.</li>
+</ul>
+
+
+<p><strong>Required text</strong></p>
+
+<p>Bioinformatics Data Skills. Vince Buffalo. 2015. O'Reilly Media.</p>
+
+<p>R for Data Science. Hadley Wickham and Garrett Grolemund. 2016. free online at http://r4ds.had.co.nz/</p>
+
+<p>Data Science from Scratch. Joel Grus. 2015. O’Reilly Media. (available free online via the library and Safari Books)</p>
+
+<p><strong>Interesting supplementary reads</strong></p>
+
+<p>Data Science at the Command Line. Jeroen Janssens. 2014. O'Reilly Media.</p>
+
+<p>Python Data Science Handbook. Jake VanderPlas. 2015. O’Reilly Media.</p>
+
+<p>Doing Data Science. Rachel Schutt and Cathy O'Neill. 2013. O'Reilly Media.</p>
+
+<p>On Being a Data Skeptic. Cathy O'Neil. 2013. O'Reilly Media.</p>
+
+<p><strong>Other equipment / material requirements</strong></p>
+
+<p>Mac, Linux, or Windows laptop (not a tablet, Chromebook, etc.) with administrative privileges. Please contact the instructor if you do not have a laptop and purchasing one would be a financial difficulty.</p>
+
+<p><strong>Meeting Schedule</strong></p>
+
+<p>Note: Updated Feb 13, 2017 - Still subject to change</p>
+
+<table>
+<thead>
+<tr>
+<th> Week </th>
+<th> Topic                                    </th>
+<th> Process                           </th>
+<th> Readings      </th>
+<th> Assignment                </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 1 (1/23)   </td>
+<td> Introduction / Software installation     </td>
+<td> </td>
+<td> </td>
+<td>                           </td>
+</tr>
+<tr>
+<td>      </td>
+<td> Automating repetitive tasks     </td>
+<td> Intro to the command line    </td>
+<td> Buffalo Ch. 3 </td>
+<td>                           </td>
+</tr>
+<tr>
+<td> 2 (1/30)   </td>
+<td> Automating repetitive tasks  </td>
+<td> Shell scripts   </td>
+<td> Buffalo Ch. 7 </td>
+<td> Commenting a shell script </td>
+</tr>
+<tr>
+<td> 3 (2/6)   </td>
+<td> Big data and answerable questions   </td>
+<td> Discussion of your research  </td>
+<td> Buffalo Ch. 1 </td>
+<td>                           </td>
+</tr>
+<tr>
+<td>      </td>
+<td> High performance computing  </td>
+<td> Intro to the cluster </td>
+<td> Buffalo Ch. 4 </td>
+<td></td>
+</tr>
+<tr>
+<td> 4 (2/13)   </td>
+<td> Sharing, collaboration, and research transparancy </td>
+<td> Git</td>
+<td> Buffalo Ch. 5 </td>
+<td> Share your git repo       </td>
+</tr>
+<tr>
+<td> 5 (2/20)   </td>
+<td> Data organization and management</td>
+<td> Intro to R and RStudio</td>
+<td> Buffalo Ch. 8 </td>
+<td></td>
+</tr>
+<tr>
+<td>    </td>
+<td> Functions</td>
+<td>R</td>
+<td>Buffalo Ch. 8</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Data visualization for exploration</td>
+<td> R: graphing</td>
+<td> Buffalo Ch. 8 </td>
+<td> </td>
+</tr>
+<tr>
+<td> 6 (2/27)   </td>
+<td> R Markdown and making projects </td>
+<td> R</td>
+<td> Buffalo Ch. 8 </td>
+<td>Graphing project</td>
+</tr>
+<tr>
+<td> 7 (3/6) </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> 8 (3/20)   </td>
+<td> Scripting</td>
+<td> R</td>
+<td> Buffalo Ch. 8 </td>
+<td> Complete data analysis    </td>
+</tr>
+<tr>
+<td> 9 (3/27)   </td>
+<td> Intro to python</td>
+<td> python</td>
+<td> Grus Ch. 2    </td>
+<td>                           </td>
+</tr>
+<tr>
+<td> 10 (4/3)  </td>
+<td> Packaging complex data</td>
+<td> python classes &amp; databases</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> 11 (4/10)  </td>
+<td> Making sure it's right</td>
+<td> try/except, assertions, and tests </td>
+<td></td>
+<td> Complete data analysis    </td>
+</tr>
+<tr>
+<td> 12 (4/17)  </td>
+<td> Things not covered: pandas, matplotlib, machine learning, make </td>
+<td>                                   </td>
+<td>               </td>
+<td>                           </td>
+</tr>
+<tr>
+<td> 13 (4/24)  </td>
+<td> Appropriate analyses and statistics      </td>
+<td></td>
+<td> Kumar et al.  </td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<p><strong>Assignments and Grading Policy</strong></p>
+
+<p>There will be five assignments during the course of the semester.  Each assignment will focus on the skill learned in class during the week and build on skills and concepts learned in previous weeks. These assignments will be initiated in class and are due at the end of the following week.</p>
+
+<p>For each assignment you will earn points. The more points you have earned, the more you have learned. Your grade will be based on the total number of points you accumulate during the semester. Assignments will be worth a total of 500 points. Students in BIO594 will also do a cummulative project involving two of the following: (1) a detailed written proposal on research involving big data, (2) analysis of research data, (3) a ~1000 word paper on your research using data, and/or (4) a poster of your research with data. The project will be worth 500 points.</p>
+
+<p>Grading for BIO594<br/>
 A 900-1000<br/>
 A- 880-899<br/>
 B+ 860-879<br/>
@@ -536,7 +391,9 @@ C 700-759<br/>
 C- 680-699<br/>
 D+ 660-679<br/>
 D 600-659 <br/>
-F &lt;600</p><p>Grading for BIO439X<br/>
+F &lt;600</p>
+
+<p>Grading for BIO439X<br/>
 A 450-500<br/>
 A- 440-449<br/>
 B+ 430-439<br/>
@@ -547,8 +404,48 @@ C 350-379<br/>
 C- 340-349<br/>
 D+ 330-339<br/>
 D 300-329<br/>
-F &lt;300</p><p><strong>Instructor Policies</strong></p><p>Any student with a documented disability should contact me as soon as possible so that we may arrange reasonable accommodations. As part of this process, please be in touch with Disability Services for Students Office at 302 Memorial Union, Phone 401-874-2098.</p><p>Students are expected to treat faculty and fellow classmates with dignity and respect.</p><p>Students are responsible for being familiar with and adhering to the published “Student Code of Conduct” which can be accessed in the University Student Handbook (<a href='http://web.uri.edu/studentconduct/student-handbook/' target='_blank' >http://web.uri.edu/studentconduct/student-handbook/</a>).</p><p>Students are expected to be honest in all academic work. A student’s name on any written work, quiz or exam shall be regarded as assurance that the work is the result of the student’s own independent thought and study. Work should be stated in the student’s own words, properly attributed to its source.   Students have an obligation to know how to quote, paraphrase, summarize, cite and reference the work of others with integrity. The following are examples of academic dishonesty.</p><ul><li>Using material, directly or paraphrasing, from published sources (print or electronic) without appropriate citation</li><li>Claiming disproportionate credit for work not done independently</li><li>Unauthorized possession or access to exams</li><li>Unauthorized communication during exams</li><li>Unauthorized use of another’s work or preparing work for another student</li><li>Taking an exam for another student</li><li>Altering or attempting to alter grades</li><li>The use of notes or electronic devices to gain an unauthorized advantage during exams</li><li>Fabricating or falsifying facts, data or references</li><li>Facilitating or aiding another’s academic dishonesty</li><li>Submitting the same paper for more than one course without prior approval from the instructors.</li></ul><p><strong>Classroom Protocol</strong></p><p>Bring your laptop to class every day.</p><ul><li><p>Install programs prior to class if required. Class time will not be spent on installation except for the first day.</p></li><li><p>Be prepared to discuss datasets and results from in-class work.</p></li><li><p>Be kind to others. Remember that people have different backgrounds and experiences with the material. Students who learn the material faster should consider helping others (teaching is an excellent way to improve your understanding of the material).</p></li><li><p>If you must come in late, please do not disrupt the class. Please ensure all cell phones, pagers, and other electronic devices are set to silent.</p></li><li><p>Students are expected to come to class. Work on assignments will be done in class. If you are unable to attend due to illness, severe weather, religious holiday, personal or
+F &lt;300</p>
+
+<p><strong>Instructor Policies</strong></p>
+
+<p>Any student with a documented disability should contact me as soon as possible so that we may arrange reasonable accommodations. As part of this process, please be in touch with Disability Services for Students Office at 302 Memorial Union, Phone 401-874-2098.</p>
+
+<p>Students are expected to treat faculty and fellow classmates with dignity and respect.</p>
+
+<p>Students are responsible for being familiar with and adhering to the published “Student Code of Conduct” which can be accessed in the University Student Handbook (http://web.uri.edu/studentconduct/student-handbook/).</p>
+
+<p>Students are expected to be honest in all academic work. A student’s name on any written work, quiz or exam shall be regarded as assurance that the work is the result of the student’s own independent thought and study. Work should be stated in the student’s own words, properly attributed to its source.   Students have an obligation to know how to quote, paraphrase, summarize, cite and reference the work of others with integrity. The following are examples of academic dishonesty.</p>
+
+<ul>
+<li><p>Using material, directly or paraphrasing, from published sources (print or electronic) without appropriate citation</p></li>
+<li><p>Claiming disproportionate credit for work not done independently</p></li>
+<li><p>Unauthorized possession or access to exams</p></li>
+<li><p>Unauthorized communication during exams</p></li>
+<li><p>Unauthorized use of another’s work or preparing work for another student</p></li>
+<li><p>Taking an exam for another student</p></li>
+<li><p>Altering or attempting to alter grades</p></li>
+<li><p>The use of notes or electronic devices to gain an unauthorized advantage during exams</p></li>
+<li><p>Fabricating or falsifying facts, data or references</p></li>
+<li><p>Facilitating or aiding another’s academic dishonesty</p></li>
+<li><p>Submitting the same paper for more than one course without prior approval from the instructors.</p></li>
+</ul>
+
+
+<p><strong>Classroom Protocol</strong></p>
+
+<p>Bring your laptop to class every day.</p>
+
+<ul>
+<li>Install programs prior to class if required. Class time will not be spent on installation except for the first day.</li>
+<li>Be prepared to discuss datasets and results from in-class work.</li>
+<li><p>Be kind to others. Remember that people have different backgrounds and experiences with the material. Students who learn the material faster should consider helping others (teaching is an excellent way to improve your understanding of the material).</p></li>
+<li><p>If you must come in late, please do not disrupt the class. Please ensure all cell phones, pagers, and other electronic devices are set to silent.</p></li>
+<li><p>Students are expected to come to class. Work on assignments will be done in class. If you are unable to attend due to illness, severe weather, religious holiday, personal or
 family emergency, or sanctioned University event please let me know as soon as possible
-to arrange assistance in learning the material to complete the assignment.</p><p>​				</p></li></ul></div>
+to arrange assistance in learning the material to complete the assignment.</p></li>
+</ul>
+
+
+<p>​</p>
 </body>
 </html>
