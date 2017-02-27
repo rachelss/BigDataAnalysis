@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>High performance computing</title>
+
+</head>
+<body>
+<h2>High performance computing</h2>
+
+<p>Due to the snow day please go through these instructions in class. Some of you may want to take advantage of the additional computing power available on campus beyond your personal computer. Read chapter 4 of your textbook for more information.</p>
+
+<ul>
+<li><p>If you are using Windows download and install PuTTY (http://www.putty.org/)</p></li>
+<li><p>Open your Terminal (Mac) or PuTTY (Windows)</p></li>
+<li><p>Connect to URI's seawulf cluster using your ssh (<strong>s</strong>ecure <strong>sh</strong>ell) and your URI username. For example</p>
+
+<p><code>ssh rsschwartz@seawulf.uri.edu</code></p>
+
+<p>Your password is set to your URI ID. You will need to change this on your first login.</p></li>
+</ul>
+
+
+<p>There are two ways to run jobs on a cluster. First, you can run them interactively just like you do on your own computer. The advantage of this is you can work easily and directly. The disadvantage is that you might want to run a job that takes a long time and you'd like to take advantage of the computing power of a the cluster (that's why you're using it in the first place).</p>
+
+<p>You are now logged in on on the "head node". A computing cluster is just that - multiple computers attached together. Obviously it would be inefficient for many people to use the same computer on the cluster. It could even crash the cluster!</p>
+
+<ul>
+<li>Access your own "node" of the cluster to work on by submitting an interactive job.</li>
+</ul>
+
+
+<p><code>qsub -I</code></p>
+
+<p>This gives you 1 CPU for a period of time. If you need more CPUs or more time you can specify that. For example to get 4 CPUs for 2 hours use <code>-l</code> then specify the number of nodes, processors per node, and the maximum time you will need them.</p>
+
+<p><code>qsub -I -l nodes=1:ppn=4 -lwalltime=2:00:00</code></p>
+
+<p>You can now run almost all the same commands you do on your own computer. Because the cluster is running Linux (CentOS) there may be a few that are slightly different. For example, both <code>man ls</code> and <code>ls —-help</code> work on Linux. Additionally, while you have access to many installed programs you need to load them before you can use them.</p>
+
+<ul>
+<li>List available software on seawolf</li>
+</ul>
+
+
+<p><code>module avail</code></p>
+
+<ul>
+<li>Because that list can be long limit your list to software starting with known values (e.g. P)</li>
+</ul>
+
+
+<p><code>module avail P</code></p>
+
+<ul>
+<li>Load software so you can use it (for example Python)</li>
+</ul>
+
+
+<p><code>module load Python/3.5.2-foss-2016b</code></p>
+
+<p>You can use tab complete to get the full title of the module.</p>
+
+<ul>
+<li>List what you have loaded already</li>
+</ul>
+
+
+<p><code>module list</code></p>
+
+<ul>
+<li>Run python (this is a programming language we will use later in the course) to show it has been loaded</li>
+</ul>
+
+
+<p><code>python</code></p>
+
+<ul>
+<li>Use secure copy (scp) to move files between your computer and the cluster. Copy the script from the homework assignment to the cluster in a folder called homework (you should make this directory on the cluster first).</li>
+</ul>
+
+
+<p><code>scp 01-run.sh rsschwartz@seawulf.uri.edu:homework</code></p>
+
+<ul>
+<li>Copy your whole data-shell folder to the cluster.</li>
+</ul>
+
+
+<p><code>scp -r data-shell rsschwartz@seawulf.uri.edu:</code></p>
+
+<ul>
+<li>Make a change to a file in the data-shell folder. Rather than copying the whole folder again just update with these recent changes.</li>
+</ul>
+
+
+<p><code>rsync -r data-shell rsschwartz@seawulf.uri.edu:</code></p>
+
+<p>If you are working with analyses that will take some time you should not use an interactive job. Instead you will write a script to submit a job. Your script might look like</p>
+
+<pre><code>#!/bin/bash 
+#PBS -l walltime=1:00:00
+#PBS -l nodes=1:ppn=4
+
+bash ~/homework/01-run.sh ~/homework/saccharomyces_cerevisiae.gff
+</code></pre>
+
+<p>You are already familiar with the shebang line. All lines starting with <code>#PBS</code> indicate parameters related to job submission. <code>PBS -l walltime=1:00:00</code> allows the job to run for up to 1 hour. <code>PBS -l nodes=4:ppn=16</code> indicates you need 1 node with 4 processors per node. There are many other possible PBS parameters not included here.</p>
+
+<ul>
+<li>Exit your interactive session. Submit this batch file as a job by running <code>qsub job_example.sh</code></li>
+<li>Check the status of your job (and others) using <code>qstat</code>.</li>
+<li>Your output and any errors have been sent to files rather than printed on the screen. Use <code>ls</code> and <code>cat</code> to see the files and your output.</li>
+</ul>
+
+
+<p>If you submit a job that you need to cancel first run <code>qstat</code> to get the job id then run <code>qdel &lt;jobid&gt;</code></p>
+
+<p>Note: If you have any large or important data you are working you should not store it in your home directory. Additional storage is connected to the cluster and access can be arranged by the HPC manager.</p>
+</body>
+</html>
