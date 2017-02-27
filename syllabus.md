@@ -83,8 +83,9 @@ Note: Updated Feb 27, 2017 - Still subject to change
 | 4 (2/13)   | Sharing, collaboration, and research transparancy | Git| Buffalo Ch. 5 | Share your git repo       |
 | 5 (2/20)   | Data organization and management| Intro to R and RStudio| Buffalo Ch. 8 ||
 |    | Functions|R|Buffalo Ch. 8||
-||Data visualization for exploration| R: graphing| Buffalo Ch. 8 | |
+||Data visualization for exploration| R: graphing| Wickham ch. 2-3 | |
 | 6 (2/27)   | R Markdown and making projects | R| Kitzes et al. P1 |Graphing project|
+|| Analyzing data by category|| Wickham ch. 2-3 | |
 | 7 (3/6) |
 | 8 (3/20)   | Scripting| R| Buffalo Ch. 8 | Complete data analysis    |
 | 9 (3/27)   | Intro to python| python| Grus Ch. 2    |                           |
