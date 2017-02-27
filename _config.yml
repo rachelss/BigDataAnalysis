@@ -1,70 +1,180 @@
-#------------------------------------------------------------
-# Values for this workshop.
-#------------------------------------------------------------
+# --- General options --- #
 
-# Which carpentry is this ("swc" or "dc")?
-carpentry: "swc"
+# url is the full website URL
+# baseurl is the website's URL without the hostname
 
-# Overall title for pages.
-title: "Workshop Title"
+# If you are building a simple GitHub user page (http://username.github.io) then use these settings:
+#url: "http://rachelss.github.io"
+#baseurl: ""
 
-# Contact email address.
-email: lessons@software-carpentry.org
+# If you are building a GitHub project page then use these settings:
+#url: "http://rachelss.github.io/BigDataAnalysis_Installation"
+#baseurl: "/BigDataAnalysis_Installation"
 
-#------------------------------------------------------------
-# Generic settings (should not need to change).
-#------------------------------------------------------------
+# Of course don't forget to change the username and projectname to YOUR username and project
 
-# What kind of thing is this ("workshop" or "lesson")?
-kind: "workshop"
+# Name of website
+title: Big Data Analysis
 
-# Magic to make URLs resolve both locally and on GitHub.
-# See https://help.github.com/articles/repository-metadata-on-github-pages/.
-repository: <USERNAME>/<PROJECT>
+# Short description of your site
+description: big data class
 
-# Sites.
-amy_site: "https://amy.software-carpentry.org/workshops"
-dc_site: "http://datacarpentry.org"
-swc_github: "https://github.com/swcarpentry"
-swc_site: "https://software-carpentry.org"
-swc_pages: "https://swcarpentry.github.io"
-template_repo: "https://github.com/swcarpentry/styles"
-example_repo: "https://github.com/swcarpentry/lesson-example"
-example_site: "https://swcarpentry.github.com/lesson-example"
-workshop_repo: "https://github.com/swcarpentry/workshop-template"
-workshop_site: "https://swcarpentry.github.io/workshop-template"
-training_site: "https://swcarpentry.github.io/instructor-training"
-swc_installer: "https://github.com/swcarpentry/windows-installer/releases/download/v0.3/SWCarpentryInstaller.exe"
+# --- Navigation bar options --- #
 
-# Surveys.
-pre_survey: "https://www.surveymonkey.com/r/swc_pre_workshop_v1?workshop_id="
-post_survey: "https://www.surveymonkey.com/r/swc_post_workshop_v1?workshop_id="
+# List of links in the navigation bar
 
-# Start time in minutes (0 to be clock-independent, 540 to show a start at 09:00 am)
-start_time: 0
+#  Resources:
+#    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
+#    - Learn markdown: "http://www.markdowntutorial.com/"
+#    - GitHub Pages: "https://pages.github.com/"
+#  Author's home: "http://deanattali.com"
 
-# Specify that things in the episodes collection should be output.
-collections:
-  episodes:
-    output: true
-    permalink: /:path/
-  extras:
-    output: true
+# Image to show in the navigation bar - image must be a square (width = height)
+# Remove this parameter if you don't want an image in the navbar
+#avatar: "/img/avatar-icon.png"
 
-# Set the default layout for things in the episodes collection.
+# --- Footer options --- #
+
+# Change all these values or delete the ones you don't want.
+# Important: you must keep the "name" parameter, everything else you can remove
+author:
+  name: Rachel Schwartz
+  email: "rsschwartz@uri.edu"
+#  facebook: yourname  # eg. daattali
+  github: rachelss    # eg. daattali
+#  twitter: rachelss   # eg. daattali
+#  google-plus: +yourname   # eg. +DeanAttali or 109424658772469020925
+#  linkedin: yourname  # eg. daattali
+#  xing: yourname      # eg. daattali
+#  stackoverflow: yourlink  # eg. "3943160/daattali"
+#  snapchat: yourname  # eg. daattali
+#  instagram: yourname # eg. daattali
+#  youtube: yourlink   # eg. user/daattali or channel/daattali
+#  spotify: yourname   # eg. daattali
+
+# Select which links to show in the footer
+footer-links-active:
+  rss: false
+  facebook: false
+  email: true
+  twitter: true
+  google-plus: false
+  github: true
+  linkedin: false
+  xing: false
+  stackoverflow: false
+  snapchat: false
+  instagram: false
+  youtube: false
+  spotify: false
+
+# Select which share links to show in posts
+share-links-active:
+  twitter: false
+  facebook: false
+  google: false
+  linkedin: false
+
+# How to display the link to the website in the footer
+# Remove this if you don't want a link in the footer
+#url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
+
+# --- Misc --- #
+
+# Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
+#disqus: ""
+
+# Fill in your Google Analytics ID to track your website using GA
+#google_analytics: ""
+
+# --- Don't need to touch anything below here (but you can if you want) --- #
+
+# Output options (more information on Jekyll's site)
+timezone: "America/Toronto"
+markdown: kramdown
+highlighter: rouge
+permalink: /:year-:month-:day-:title/
+paginate: 5
+
+kramdown:
+  input: GFM
+
+# Default YAML values (more information on Jekyll's site)
 defaults:
-  - values:
-      root: ..
-  - scope:
+  -
+    scope:
       path: ""
-      type: episodes
+      type: "posts"
     values:
-      layout: episode
+      layout: "post"
+      comments: true  # add comments to all blog posts
+      social-share: true # add social media sharing buttons to all blog posts
+  -
+    scope:
+      path: "" # all files
+    values:
+      layout: "page"
+      show-avatar: true
 
-# Files and directories that are not to be copied.
+# Use tags pages (not recommended if you are deploying via GitHub pages, only set to true if deploying locally with ruby)
+link-tags: false
+
+# Exclude these files from production site
 exclude:
-  - Makefile
-  - bin
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
+  - Vagrantfile
 
-# Turn off built-in syntax highlighting.
-highlighter: false
+# prose.io config
+prose:
+  rooturl: '_posts'
+  media: 'img'
+  ignore:
+    - 404.html
+    - LICENSE
+    - feed.xml
+    - _config.yml
+    - /_layouts
+    - /_includes
+    - /css
+    - /img
+    - /js
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Post title"
+          placeholder: "Title"
+          alterable: true
+      - name: "subtitle"
+        field:
+          element: "textarea"
+          label: "Subtitle"
+          placeholder: "A description of your post."
+          alterable: true
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          help: "Enter date of post."
+          placeholder: "yyyy-mm-dd"
+          alterable: true
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Publish"
+          help: "Check to publish post, uncheck to hide."
+
+gems:
+  - jekyll-paginate
+
+# Beautiful Jekyll / Dean Attali
+# 2fc73a3a967e97599c9763d05e564189
