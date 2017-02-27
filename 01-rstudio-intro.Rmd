@@ -1,0 +1,65 @@
+---
+title: "R for reproducible scientific analysis"
+output:
+  html_document: default
+  pdf_document: default
+subtitle: Introduction to R and RStudio
+layout: page
+---
+
+## Introduction to R and RStudio
+
+R is a useful tool for scientific computing because
+
+* it’s free, well-documented, and runs almost everywhere;
+* it has a large (and growing) user base among scientists; and
+* it has a large library of external packages available for performing diverse tasks.
+
+We'll be using RStudio: a free, open source R integrated development
+environment (IDE). It provides a built in editor, works on all platforms (including
+on servers) and provides many advantages such as integration with version
+control and project management.
+
+Something to keep in mind as we use R is just one tool to conduct analyses efficiently and to do so in a way that is reproducible (by you and others). Thus, the goal here is not to teach you how to use R, but to use this software to teach you how to think about and analyze data.
+
+**Basic layout**
+
+When you first open RStudio, you will be greeted by three panels:
+
+* The interactive R console (entire left)
+* Workspace/History (tabbed in upper right)
+* Files/Plots/Packages/Help (tabbed in lower right)
+
+Once you open files, such as R scripts, an editor panel will also open
+in the top left.
+
+## Work flow within RStudio
+You can type on the "command line" in the console window. However, just as with bash, you will want to save your code in a script. Saving code is easy in R Studio.
+
+* Select `File - New Project  `
+* Select `New Directory` and `Empty Project`  
+* Give the project a name  
+* Browse to the subdirectory you would like to do your work
+
+To keep track of the commands you are running in a script:
+
+* Select `File - New File - R Script`
+
+Now you have a fourth window to keep track of commands.  
+
+## R Packages
+
+It is possible to add functions to R by
+obtaining a package written by someone else. As of this writing, there
+are over 7,000 packages available on CRAN (the comprehensive R archive
+network). R and RStudio have functionality for managing packages:
+
+* You can see what packages are installed by typing
+  `installed.packages()`
+* You can install packages by typing `install.packages("packagename")`,
+  where `packagename` is the package name, in quotes.
+* You can update installed packages by typing `update.packages()`
+* You can remove a package with `remove.packages("packagename")`
+* You can make a package you have installed available for use in your session with `library(packagename)`
+
+Install the following packages: `ggplot2`, `plyr`, `gapminder`, `curl` if you have not done so already.

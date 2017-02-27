@@ -1,0 +1,186 @@
+---
+title: "Analyzing data with R"
+output: pdf_document
+layout: page
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE}
+library(curl)
+library(ggplot2)
+library(plyr)
+gapminder_location<-curl(url = "https://raw.githubusercontent.com/resbaz/r-novice-gapminder-files/master/data/gapminder-FiveYearData.csv")
+gapminder<-read.csv(gapminder_location)
+```
+
+### Manipulating Data
+
+Now that our data is loaded in memory, we can start doing things with it.
+
+If we want to get a single value from the data frame, we can provide an [index](reference.html#index) in square brackets, just as we do in math:
+
+
+```{r}
+#first value in gapminder
+gapminder[1, 1]
+
+#middle value in gapminder
+gapminder[3, 3]
+```
+
+
+An index like `[3, 3]` selects a single element of a data frame, but we can select whole sections as well.
+For example, we can select the first two rows of values for the first four columns like this:
+
+
+```{r}
+gapminder[1:2, 1:4]
+```
+
+The [slice](reference.html#slice) `1:4` means, "Start at index 1 and go to index 4."
+
+The slice does not need to start at 1, e.g. the line below selects rows 5 through 10:
+
+
+```{r}
+gapminder[5:10, 1:4]
+```
+
+
+We can use the function `c`, which stands for **c**ombine, to select non-contiguous values:
+
+
+```{r}
+gapminder[c(3, 8, 37, 56), c(1, 4, 5)]
+```
+
+
+We also don't have to provide a slice for either the rows or the columns.
+If we don't include a slice for the rows, R returns all the rows; if we don't include a slice for the columns, R returns all the columns.
+If we don't provide a slice for either rows or columns, e.g. `gapminder[, ]`, R returns the full data frame.
+
+
+```{r}
+# All columns from row 5
+gapminder[5, ]
+```
+
+
+```{r,eval=FALSE}
+# All rows from column 16
+gapminder[, 6]
+```
+
+We can also calculate some information from our data. For example, the maximum and minimum of a list are as follows.
+
+```{r}
+max(gapminder[,6])
+min(gapminder[,6])
+```
+
+
+Now that we have our data in R, let's do something with it.
+
+We have the GDP per capita as well as the population of the country. Let's calculate the GDP and add that to our data frame. First, we multiply gdpPercap by pop and save that to a variable. Multiplying two columns automatically multiplies each pair of values and makes a vector containing each result.
+
+
+```{r}
+gdp<-gapminder$gdpPercap * gapminder$pop
+```
+
+gdp is a vector. A vector is the most common and basic data structure in `R`. It can **only contain one data type**. They are the building blocks of
+every other data structure.
+
+A vector can contain any of five types:
+
+* logical (e.g., `TRUE`, `FALSE`)
+* integer (e.g., `as.integer(3)`)
+* numeric (real or decimal) (e.g, `2`, `2.0`, `pi`)
+* complex (e.g, `1 + 0i`, `1 + 4i`)
+* character (e.g, `"a"`, `"swc"`)
+
+Now we can add the vector gdp to the gapminder data frame using `cbind` which stands for "column bind", as in bind the vector gdp to the gapminder data frame.
+
+```{r}
+gapminder <- cbind(gapminder, gdp)
+```
+
+We can check that our results are correct by looking at the first item in gdp and comparing it to the expected result.
+
+```{r}
+gdp[1]
+gapminder$gdp[1]
+gapminder$gdpPercap[1]*gapminder$pop[1]
+```
+
+We can also view the first few rows of the data again.
+
+```{r}
+head(gapminder)
+```
+
+
+### Challenge
+
+* Make a new column in the `gapminder` data frame that
+contains population in units of millions of people.
+
+
+```{r, echo=FALSE}
+pop_mill <- gapminder$pop/1000000
+gapminder <- cbind(gapminder, pop_mill)
+```
+
+* Check the head or tail of the data frame to make sure
+it worked.
+
+```{r}
+head(gapminder)
+```
+
+Now let's use our data to answer a biological question. For example:
+
+
+### What is the relationship between life expectancy and year?
+
+We won't go into too much detail, but briefly: 
+
+* `lm` estimates linear statistical models
+* The first argument is a formula, with  `a ~ b` meaning that `a`,
+     the dependent (or response) variable, is a
+    function of `b`, the independent variable. 
+* We tell `lm` to use the gapminder data frame, so it knows where to
+ find the variables `lifeExp` and `year`. 
+
+```{r}
+reg <- lm(lifeExp ~ year, data=gapminder)
+```
+
+Let's look at the output:
+
+```{r}
+reg
+```
+
+Not much there right? But if we look at the structure...
+
+
+```{r,eval=FALSE}
+str(reg)
+```
+
+There's a great deal stored in nested lists! The structure function
+allows you to see all the data available, in this case, the data that
+was returned by the `lm` function.
+
+For now, we can look at the `summary`:
+
+
+```{r}
+summary(reg)
+```
+
+As you might expect, life expectancy has slowly been increasing over
+time, so we see a significant positive association!

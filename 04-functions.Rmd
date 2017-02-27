@@ -1,0 +1,336 @@
+---
+title: "Creating functions for analysis"
+output: pdf_document
+layout: page
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE}
+library(curl)
+library(ggplot2)
+library(plyr)
+gapminder_location<-curl(url = "https://raw.githubusercontent.com/resbaz/r-novice-gapminder-files/master/data/gapminder-FiveYearData.csv")
+gapminder<-read.csv(gapminder_location)
+```
+
+There are many reasons to make it easy to rerun our analyses. The
+gapminder data is updated periodically, and we may want to pull in that new
+information later and re-run our analysis again. We may also obtain similar data
+from a different source in the future.
+
+In this lesson, we'll learn how to write a function so that we can repeat
+a set of operations with a single command. Once we have a function that is known to work, we can use it repeatedly without worrying about how it works, just as we have used functions like min and max.
+
+Functions gather a sequence of operations into a whole, preserving it for ongoing use. Functions provide:
+
+* a name we can remember and invoke it by
+* relief from the need to remember the individual operations
+* a defined set of inputs and expected outputs
+* rich connections to the larger programming environment
+
+As the basic building block of most programming languages, user-defined functions constitute "programming" as much as any single abstraction can. If you have written a function, you are a computer programmer.
+
+
+### Defining a function
+
+We define a function by assigning the output of `function` to a variable.
+The list of argument names are contained within parentheses.
+Next, the body of the function--the statements that are executed when it runs--is contained within curly braces (`{}`).
+The statements in the body are indented by two spaces.
+This makes the code easier to read but does not affect how the code operates.
+
+When we call the function, the values we pass to it are assigned to those variables so that we can use them inside the function.
+Inside the function, we use a return statement to send a result back to whoever asked for it.
+
+Calling our own function is no different from calling any other function.
+
+One feature unique to R is that the return statement is not required.
+R automatically returns whichever variable is on the last line of the body
+of the function. Since we are just learning, we will explicitly define the
+return statement.
+
+Previously we calculated the GDP by multiplying the population and gdp per capita. Rather than specifying the dataset we want to calculate gdp for every time, let's turn this into a function.
+
+
+```{r}
+# Takes a dataset (dat) and multiplies the pop column with the gdpPercap column.
+calcGDP <- function(dat) {
+  gdp<-dat$gdpPercap * dat$pop
+  
+  return(gdp)
+}
+```
+
+We define `calcGDP` by assigning it to the output of `function`.
+The list of argument names are contained within parentheses.
+Next, the body of the function -- the statements executed when you
+call the function -- is contained within curly braces (`{}`).
+
+We've indented the statements in the body by two spaces. This makes
+the code easier to read but does not affect how it operates.
+
+When we call the function, the values we pass to it are assigned
+to the arguments, which become variables inside the body of the
+function.
+
+Inside the function, we use the `return` function to send back the
+result. This return function is optional: R will automatically
+return the results of whatever command is executed on the last line
+of the function.
+
+* Start with your original data and calculate gdp
+
+```{r}
+gapminder_location<-curl(url = "https://raw.githubusercontent.com/resbaz/r-novice-gapminder-files/master/data/gapminder-FiveYearData.csv")
+gapminder<-read.csv(gapminder_location)
+
+calcGDP(head(gapminder))
+```
+
+That's not very informative. Let's also output the information from the other columns.
+
+```{r}
+# Takes a dataset and multiplies the population column with the GDP per capita column.
+calcGDP <- function(dat) {
+  gdp <- dat$pop * dat$gdpPercap  
+  dat <- cbind(dat, gdp)
+  return(dat)
+}
+
+calcGDP(head(gapminder))
+```
+
+Note we can specify any dataset or subset of our data.
+
+```{r}
+calcGDP(gapminder[20:30,])
+```
+
+We can use `==` to subset data by a particular value.
+
+```{r}
+head(calcGDP(gapminder[gapminder$year == 2007, ]))
+```
+
+We can get values for two different years using by specifying one year OR another using `|` (the converse is `&`)
+
+```{r}
+head(calcGDP(gapminder[gapminder$year == 2007|gapminder$year == 1952, ]))
+```
+
+Because this is getting unwieldy to read let's put all this subsetting into our function. When we call the function we want to specify the dataset, year(s), and country(ies).
+
+```{r,eval=FALSE}
+calcGDP(gapminder, 1952,"Afghanistan")
+```
+
+We can also use a matching function `%in%` to subset data by a range of values.
+
+To do that, we need add some more arguments to our function so we can extract
+year and country.
+
+```{r}
+# Takes a dataset and multiplies the population column with the GDP per capita column.
+calcGDP <- function(dat, year, country) {
+  dat <- dat[dat$year %in% year, ]
+  dat <- dat[dat$country %in% country,]
+  
+  gdp <- dat$pop * dat$gdpPercap
+  
+  dat <- cbind(dat, gdp)
+  return(dat)
+}
+
+```
+
+The function now takes a subset of the rows for all columns by year.
+It then subsets this subset by country.
+Then it calculates the GDP for the subset of the previous two steps.
+The function then adds the GDP as a new column to the subsetted data and returns
+this as the final result.
+Because we have defined all of these pieces of code in one function we can now repeat this process for any dataset.
+
+We can now calculate the GDP for a single combination of year and country.
+
+By using `%in%` we can also give multiple years or countries
+to those arguments.
+
+```{r}
+calcGDP(gapminder, 1952:1962,country="Afghanistan")
+```
+
+Note that we haven't changed our original dataset. The subsetting only occurs to the copy of the data inside the function.
+
+```{r}
+dim(gapminder)
+```
+
+Now let's expand this function to check whether the year and country are specified. If they aren't then we can use all of them. We can use conditional statements to set actions to occur only if a condition or a set of conditions are met.
+
+
+```{r, eval=FALSE}
+# if
+if (condition is true) {
+  perform action
+}
+
+# if ... else
+if (condition is true) {
+  perform action
+} else {  # that is, if the condition is false,
+  perform alternative action
+}
+```
+
+A common use of an `if` statement if to check is to compare values. For example:
+```{r}
+x=1001
+if(x==1001){
+  print('x is 1001')
+} else{
+  print('x is not 1001')
+}
+```
+
+```{r}
+x=1001
+if(x>1000){
+  print('x is greater than 1000')
+} else{
+  print('x is not greater than 1000')
+}
+```
+
+And if I'm coding properly I would put this in a function.
+
+```{r}
+check1000<-function(x){
+  if(x>1000){
+    print(x)
+    print('is greater than 1000')
+  } else{
+    print(x)
+    print('is not greater than 1000')
+  }
+}
+check1000(1001)
+```
+
+For calculating gdp information we first specify the default value of year and country as NULL. We then check whether when the function is called the year or country is specified or the default value is used using an `if` statement and the `is.null` function.
+
+
+```{r}
+# Takes a dataset and multiplies the population column with the GDP per capita column.
+calcGDP <- function(dat, year=NULL, country=NULL) {
+  if(!is.null(year)) {
+    dat <- dat[dat$year %in% year, ]
+  }
+  if (!is.null(country)) {
+    dat <- dat[dat$country %in% country,]
+  }
+  gdp <- dat$pop * dat$gdpPercap
+
+  dat <- cbind(dat, gdp=gdp)
+  return(dat)
+}
+```
+
+The function now subsets the provided data by year if the year argument isn't
+empty, then subsets the result by country if the country argument isn't empty.
+Then it calculates the GDP for whatever subset emerges from the previous two steps.
+The function then adds the GDP as a new column to the subsetted data and returns
+this as the final result.
+You can see that the output is much more informative than just getting a vector of numbers.
+
+Let's take a look at what happens when we specify the year:
+
+
+```{r}
+head(calcGDP(gapminder, year=2007))
+```
+
+Or for a specific country:
+
+
+```{r}
+calcGDP(gapminder, country="Australia")
+```
+
+Or both:
+
+```{r}
+calcGDP(gapminder, year=2007, country="Australia")
+```
+
+Let's walk through the body of the function:
+
+```{r,eval=FALSE}
+calcGDP <- function(dat, year=NULL, country=NULL) {
+}
+```
+
+Here we've added two arguments, `year`, and `country`. We've set
+*default arguments* for both as `NULL` using the `=` operator
+in the function definition. This means that those arguments will
+take on those values unless the user specifies otherwise.
+
+
+```{r,eval=FALSE}
+  if(!is.null(year)) {
+    dat <- dat[dat$year %in% year, ]
+  }
+
+  if (!is.null(country)) {
+    dat <- dat[dat$country %in% country,]
+  }
+```
+
+Here, we check whether each additional argument is set to `null`,
+and whenever they're not `null` overwrite the dataset stored in `dat` with
+a subset given by the non-`null` argument.
+
+We can now ask the function to calculate the GDP for:
+
+ * The whole dataset;
+ * A single year;
+ * A single country;
+ * A single combination of year and country.
+
+#### Tip: Pass by value
+
+Functions in R almost always make copies of the data to operate on
+inside of a function body. When we modify `dat` inside the function
+we are modifying the copy of the gapminder dataset stored in `dat`,
+not the original variable we gave as the first argument.
+
+This is called "pass-by-value" and it makes writing code much safer:
+you can always be sure that whatever changes you make within the
+body of the function, stay inside the body of the function.
+
+
+#### Tip: Function scope
+
+Another important concept is scoping: any variables (or functions!) you
+create or modify inside the body of a function only exist for the lifetime
+of the function's execution. When we call `calcGDP`, the variables `dat`,
+`gdp` only exist inside the body of the function. Even if we
+have variables of the same name in our interactive R session, they are
+not modified in any way when executing a function.
+
+
+### Challenge
+
+What is the expected result from the following script?
+ 
+```{r,eval=FALSE}
+add3 <- function(y){
+   y+3
+ }
+ x <- 10
+ y <- add3(x)
+ print(x)
+ print(y)
+```
+
