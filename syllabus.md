@@ -71,24 +71,25 @@ Mac, Linux, or Windows laptop (not a tablet, Chromebook, etc.) with administrati
 
 **Meeting Schedule**
 
-Note: Updated Feb 27, 2017 - Still subject to change
+Note: Updated March 6, 2017 - Still subject to change
 
 | Week | Topic                                    | Process                           | Readings      | Assignment                |
 | ---- | ------------ | ---------- | ------------- | ---- |
-| 1 (1/23)   | Introduction / Software installation     | | |                           |
+| 1 (1/23)   | Introduction / Software installation     | | Kitzes et al. P1|                           |
 |      | Automating repetitive tasks     | Intro to the command line    | Buffalo Ch. 3 |                           |
 | 2 (1/30)   | Automating repetitive tasks  | Shell scripts   | Buffalo Ch. 7 | Commenting a shell script |
 | 3 (2/6)   | Big data and answerable questions   | Discussion of your research  | Buffalo Ch. 1 |                           |
 |      | High performance computing  | Intro to the cluster | Buffalo Ch. 4 ||
 | 4 (2/13)   | Sharing, collaboration, and research transparancy | Git| Buffalo Ch. 5 | Share your git repo       |
-| 5 (2/20)   | Data organization and management| Intro to R and RStudio| Buffalo Ch. 8 ||
-|    | Functions|R|Buffalo Ch. 8||
-||Data visualization for exploration| R: graphing| Wickham ch. 2-3 | |
-| 6 (2/27)   | R Markdown and making projects | R| Kitzes et al. P1 |Graphing project|
-|| Analyzing data by category|| Wickham ch. 2-3 | |
-| 7 (3/6) |
-| 8 (3/20)   | Scripting| R| Buffalo Ch. 8 | Complete data analysis    |
-| 9 (3/27)   | Intro to python| python| Grus Ch. 2    |                           |
+| 5 (2/20)   | Coding for data analysis| Intro to R and RStudio| Buffalo Ch. 8 ||
+|    | Data organization and management|R: functions|Buffalo Ch. 8||
+||Data visualization for exploration| R: ggplot2| Wickham ch.2,3,28 | |
+| 6 (2/27)   | Good data practice | R Markdown| Wickham ch. 27,29,30 |Graphing project|
+|| Analyzing data by category|R: plyr/dplyr | Wickham ch. 5 | |
+| 7 (3/6) | Tidy Data and Relational data|R: dplyr| Wickham ch. 12,13
+|    | Control Flow and Scripting| R: tidyr| Buffalo ch. 8 | Complete data analysis    |
+| 8 (3/20)   | Intro to python| python| Grus Ch. 2  |    |
+| 9 (3/27)   | | python|    |                           |
 | 10 (4/3)  | Packaging complex data| python classes & databases|||
 | 11 (4/10)  | Making sure it's right| try/except, assertions, and tests || Complete data analysis    |
 | 12 (4/17)  | Things not covered: pandas, matplotlib, machine learning, make |                                   |               |                           |
