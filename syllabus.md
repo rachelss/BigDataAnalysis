@@ -71,7 +71,7 @@ Mac, Linux, or Windows laptop (not a tablet, Chromebook, etc.) with administrati
 
 **Meeting Schedule**
 
-Note: Updated March 6, 2017 - Still subject to change
+Note: Updated March 9, 2017 - Still subject to change
 
 | Week | Topic                                    | Process                           | Readings      | Assignment                |
 | ---- | ------------ | ---------- | ------------- | ---- |
@@ -82,12 +82,12 @@ Note: Updated March 6, 2017 - Still subject to change
 |      | High performance computing  | Intro to the cluster | Buffalo Ch. 4 ||
 | 4 (2/13)   | Sharing, collaboration, and research transparancy | Git| Buffalo Ch. 5 | Share your git repo       |
 | 5 (2/20)   | Coding for data analysis| Intro to R and RStudio| Buffalo Ch. 8 ||
-|    | Data organization and management|R: functions|Buffalo Ch. 8||
+|    | Data organization and management|R: functions|Buffalo Ch. 2, Kitzes P1||
 ||Data visualization for exploration| R: ggplot2| Wickham ch.2,3,28 | |
-| 6 (2/27)   | Good data practice | R Markdown| Wickham ch. 27,29,30 |Graphing project|
+| 6 (2/27)   | Good data practice | R Markdown| Wickham ch. 27,29,30 |Exploratory analysis|
 || Analyzing data by category|R: plyr/dplyr | Wickham ch. 5 | |
-| 7 (3/6) | Tidy Data and Relational data|R: dplyr| Wickham ch. 12,13
-|    | Control Flow and Scripting| R: tidyr| Buffalo ch. 8 | Complete data analysis    |
+| 7 (3/6) | Tidy Data and Relational data|R: dplyr,tidyr| Wickham ch. 12,13
+|    | Testing and Scripting|R - shell  | Buffalo ch. 8 |     |
 | 8 (3/20)   | Intro to python| python| Grus Ch. 2  |    |
 | 9 (3/27)   | | python|    |                           |
 | 10 (4/3)  | Packaging complex data| python classes & databases|||
