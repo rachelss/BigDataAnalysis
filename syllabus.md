@@ -53,7 +53,11 @@ R for Data Science. Hadley Wickham and Garrett Grolemund. 2016. free online at h
 
 Data Science from Scratch. Joel Grus. 2015. O’Reilly Media. (available free online via the library and Safari Books)
 
-The Practice of Reproducible Research. Justin Kitzes, Daniel Turek, Fatma Deniz (Eds.) 2017. https://www.practicereproducibleresearch.org/ UC Press
+The Practice of Reproducible Research. Justin Kitzes, Daniel Turek, Fatma Deniz (Eds.) 2017. free online at https://www.practicereproducibleresearch.org/ UC Press
+
+A Whirlwind Tour of Python. Jake VanderPlas. 2016. Available free at https://github.com/jakevdp/WhirlwindTourOfPython
+
+Python Data Science Handbook. Jake VanderPlas. available free at https://github.com/jakevdp/PythonDataScienceHandbook
 
 **Interesting supplementary reads**
 
@@ -63,6 +67,9 @@ Python Data Science Handbook. Jake VanderPlas. 2015. O’Reilly Media.
 
 Doing Data Science. Rachel Schutt and Cathy O'Neill. 2013. O'Reilly Media.
 
+Big Data and Social Science: A Practical Guide to Methods and Tools. 2016. 
+Ian Foster, Rayid Ghani, Ron S. Jarmin, Frauke Kreuter, and Julia Lane, eds.  CRC Press.
+
 On Being a Data Skeptic. Cathy O'Neil. 2013. O'Reilly Media.
 
 **Other equipment / material requirements**
@@ -71,7 +78,7 @@ Mac, Linux, or Windows laptop (not a tablet, Chromebook, etc.) with administrati
 
 **Meeting Schedule**
 
-Note: Updated March 9, 2017 - Still subject to change
+Note: Updated April 3, 2017 - Still subject to change
 
 | Week | Topic                                    | Process                           | Readings      | Assignment                |
 | ---- | ------------ | ---------- | ------------- | ---- |
@@ -88,12 +95,15 @@ Note: Updated March 9, 2017 - Still subject to change
 || Analyzing data by category|R: plyr/dplyr | Wickham ch. 5 | |
 | 7 (3/6) | Tidy Data and Relational data|R: dplyr,tidyr| Wickham ch. 12,13
 |    | Testing and Scripting|R - shell  | Buffalo ch. 8 |     |
-| 8 (3/20)   | Intro to python| python| Grus Ch. 2  |    |
-| 9 (3/27)   | | python|    |                           |
-| 10 (4/3)  | Packaging complex data| python classes & databases|||
+| 8 (3/20)   | Recap
+||Appropriate analyses and statistics      ||Foster et al.  |
+| 9 (3/27)   | Automating repetitive tasks| Python: intro| Grus Ch. 2 / Vanderplas: whirlwind  |                              |
+||Pattern counting |Python: basics|Vanderplas ch. 1|Pattern counting|
+| 10 (4/3)  | Complex data| Python: pandas class|Vanderplas ch. 2-3||
+|   | Packaging complex data| python classes & databases|||
 | 11 (4/10)  | Making sure it's right| try/except, assertions, and tests || Complete data analysis    |
-| 12 (4/17)  | Things not covered: pandas, matplotlib, machine learning, make |                                   |               |                           |
-| 13 (4/24)  | Appropriate analyses and statistics      || Kumar et al.  ||
+| 12 (4/17)  | Advanced work  |  machine learning, make                                 |               |                           |
+| 13 (4/24)  |Wrap up  ||
 
 **Assignments and Grading Policy**
 

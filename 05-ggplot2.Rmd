@@ -1,6 +1,8 @@
 ---
 title: "Graphs for exploration and publication"
-output: pdf_document
+output:
+  html_document: default
+  pdf_document: default
 layout: page
 ---
 ```{r setup, include=FALSE}
