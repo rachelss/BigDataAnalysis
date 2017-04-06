@@ -99,9 +99,9 @@ Note: Updated April 3, 2017 - Still subject to change
 ||Appropriate analyses and statistics      ||Foster et al.  |
 | 9 (3/27)   | Automating repetitive tasks| Python: intro| Grus Ch. 2 / Vanderplas: whirlwind  |                              |
 ||Pattern counting |Python: basics|Vanderplas ch. 1|Pattern counting|
-| 10 (4/3)  | Complex data| Python: pandas class|Vanderplas ch. 2-3||
-|   | Packaging complex data| python classes & databases|||
-| 11 (4/10)  | Making sure it's right| try/except, assertions, and tests || Complete data analysis    |
+| 10 (4/3)  | Data structures and complex data| Python: pandas |Vanderplas ch. 2-3||
+|11 (4/10)   | Packaging complex data| python classes & databases|||
+|   | Making sure it's right| try/except, assertions, and tests || Complete data analysis    |
 | 12 (4/17)  | Advanced work  |  machine learning, make                                 |               |                           |
 | 13 (4/24)  |Wrap up  ||
 
