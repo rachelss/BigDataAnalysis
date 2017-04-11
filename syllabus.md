@@ -102,8 +102,8 @@ Note: Updated April 3, 2017 - Still subject to change
 | 10 (4/3)  | Data structures and complex data| Python: pandas |Vanderplas ch. 2-3||
 |11 (4/10)   | Packaging complex data| Python: pandas joins|||
 |   | Making sure it's right| Python: tests || Complete data analysis    |
-| 12 (4/17)  | Plotting   |                 |               ||
 |   | Command line   |                 |               ||
+| 12 (4/17)  | Plotting   |                 |               ||
 | 13 (4/24)  |Wrap up  ||
 
 **Assignments and Grading Policy**
