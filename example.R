@@ -42,14 +42,19 @@ x>2
 p<-c(.04,.1)
 sig<-p<0.05
 p*x
+
+gm$continent<-as.character(gm$continent)
+gm <-as.data.frame(gm)
 #functions
 #calculate population of continent for a year
-calc_cont_pop<-function(d,continent,year){
-  sum(d[d$year == year & d$continent == continent,"pop"])
+calc_cont_pop<-function(continent){
+  sum(gm[gm$year == 1997 & gm$continent == continent,"pop"])
 }
-calc_cont_pop(gm,'Africa',1997)
-calc_cont_pop(gm,'Africa',1998)
-calc_cont_pop(gm,'Africa',1999)
+
+calc_cont_pop('Asia')
+
+cont_list <- unique(as.character(gm$continent))
+pops_all_conts_1997 <- lapply(cont_list,calc_cont_pop)
 
 #plots
 pdf("lifeexp_v_time.pdf",width=12,height=4)
@@ -57,3 +62,7 @@ ggplot(data = gm,aes(x=lifeExp,y=gdpPercap,color=country))+
   geom_point()+scale_y_log10()+geom_smooth(method="lm",se = FALSE)+
   theme(legend.position = 'None')
 dev.off()
+
+library(plotly)
+ggplot(data = gm,aes(x=year,y=pop,color=continent))+
+  geom_point()
