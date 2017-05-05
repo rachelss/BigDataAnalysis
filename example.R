@@ -15,6 +15,8 @@ library(dplyr)
 #from gapminder package the gapminder data
 #install.packages('gapminder')
 gm <- gapminder::gapminder
+
+#misc
 head(gm)
 str(gm)  #structure of data
 class(gm)
@@ -32,9 +34,21 @@ min(gm[,5])
 colnames(gm)
 gm$gdp <- gm$pop * gm$gdpPercap
 
-ggplot(data = gm,aes(x=lifeExp,y=gdpPercap))+
-  geom_point()
+#thinking about vectors
+x <- c(1:4)
+x*2
+x*x
+x>2
+p<-c(.04,.1)
+sig<-p<0.05
+p*x
+#functions
+#calculate population of continent for a year
+calc_cont_pop<-function(d,continent,year){
+  sum(d[d$year == year & d$continent == continent,"pop"])
+}
 
+#plots
 pdf("lifeexp_v_time.pdf",width=12,height=4)
 ggplot(data = gm,aes(x=lifeExp,y=gdpPercap,color=country))+
   geom_point()+scale_y_log10()+geom_smooth(method="lm",se = FALSE)+
