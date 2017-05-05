@@ -17,3 +17,7 @@ library(dplyr)
 gm <- gapminder::gapminder
 head(gm)
 str(gm)  #structure of data
+class(gm)
+typeof(gm)
+gm$country
+colnames(gm)
