@@ -11,3 +11,6 @@ library(ggplot2)
 library(dplyr)
 
 #working with gapminder data - see gapminder.org
+#assign to variable named gm
+#from gapminder package the gapminder data
+gm <- gapminder::gapminder
