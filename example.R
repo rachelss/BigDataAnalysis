@@ -49,14 +49,15 @@ gm <-as.data.frame(gm)
 #functions
 #calculate population of continent for a year
 #not working come back to this
-calc_cont_pop<-function(continent){
-  sum(gm[gm$year == 1997 & gm$continent == continent,"pop"])
+calc_cont_pop<-function(continent,year){
+  sum(gm[gm$year == year & gm$continent == continent,"pop"])
 }
 
 calc_cont_pop('Asia')
 
 cont_list <- unique(as.character(gm$continent))
-pops_all_conts_1997 <- sapply(cont_list,calc_cont_pop)
+pops_all_conts_1997 <- mapply(calc_cont_pop,cont_list,1997)
+pops_all_conts_2002 <- mapply(calc_cont_pop,cont_list,2002)
 names(pops_all_conts_1997) <- cont_list
 
 #plots
@@ -67,8 +68,10 @@ ggplot(data = gm,aes(x=lifeExp,y=gdpPercap,color=country))+
 dev.off()
 
 #Split-Apply-Combine with dplyr
+gm %>% group_by(continent) %>% summarise(gdppercap =mean(gdpPercap)) %>%
+  ggplot(aes(x=continent,y=gdppercap))+geom_point()
 
-
-
+gm %>% filter(year == 2007) %>%
+  ggplot(aes(x=continent, y=gdpPercap*pop))+geom_point()
 
 
