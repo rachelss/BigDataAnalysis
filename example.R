@@ -29,3 +29,6 @@ gm[c(3,5),]
 min(gm$lifeExp)
 max(gm$pop)
 min(gm[,5])
+colnames(gm)
+gm$gdp <- gm$pop * gm$gdpPercap
+
