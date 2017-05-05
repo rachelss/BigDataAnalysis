@@ -11,7 +11,7 @@ library(ggplot2)
 library(dplyr)
 
 #from command command line
-myfilename <- commandArgs()[1]
+myfilename <- commandArgs(trailingOnly = TRUE)[1]
 
 #working with gapminder data - see gapminder.org
 #assign to variable named gm
