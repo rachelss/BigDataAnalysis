@@ -16,3 +16,4 @@ library(dplyr)
 #install.packages('gapminder')
 gm <- gapminder::gapminder
 head(gm)
+str(gm)  #structure of data
