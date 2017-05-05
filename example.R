@@ -12,7 +12,6 @@ library(dplyr)
 
 #from command command line
 myfilename <- commandArgs()[1]
-print(myfilename)
 
 #working with gapminder data - see gapminder.org
 #assign to variable named gm
@@ -64,3 +63,4 @@ dev.off()
 gm_model <- lm(lifeExp ~ year, data = gm)
 print(summary(gm_model))
 
+print(myfilename)
