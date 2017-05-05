@@ -59,7 +59,7 @@ gm %>% filter(year == myyear) %>% #filter gm for 1997
 
 
 ##MODELS##
-ggplot(gm,aes(x=year,y=lifeExp))+
+ggplot(gm,aes(x=year,y=lifeExp,color=continent))+
   xlab("Year") + ylab("Life Expectancy")+
   geom_point() + geom_smooth(method=lm)
 dev.off()
@@ -68,3 +68,11 @@ gm_model <- lm(lifeExp ~ year, data = gm)
 print(summary(gm_model))
 
 print(myfilename)
+
+#models for multiple continents
+all_lm <- gm %>% group_by(continent) %>%
+  do(LE_year = lm(lifeExp ~ year, data=.))
+
+library(broom)
+glance(all_lm,LE_year)
+tidy(all_lm,LE_year)
