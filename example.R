@@ -21,3 +21,6 @@ class(gm)
 typeof(gm)
 gm$country
 colnames(gm)
+rownames(gm)
+gm_copy<-gm
+colnames(gm_copy) <- c('a','b','c','d','e','f')
