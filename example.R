@@ -36,6 +36,7 @@ ggplot(data = gm,aes(x=lifeExp,y=gdpPercap))+
   geom_point()
 
 pdf("lifeexp_v_time.pdf",width=12,height=4)
-ggplot(data = gm,aes(x=year,y=lifeExp,color=continent))+
-  geom_point()
+ggplot(data = gm,aes(x=lifeExp,y=gdpPercap,color=country))+
+  geom_point()+scale_y_log10()+geom_smooth(method="lm",se = FALSE)+
+  theme(legend.position = 'None')
 dev.off()
