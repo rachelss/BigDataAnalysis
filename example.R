@@ -35,7 +35,7 @@ pops_all_conts_2002 <- mapply(calc_cont_pop,cont_list,2002)
 names(pops_all_conts_1997) <- cont_list
 
 #plots
-pdf("lifeexp_v_time.pdf",width=12,height=4)
+pdf(paste(myfilename,myyear,'.pdf'),width=12,height=4)
 ggplot(data = gm,aes(x=lifeExp,y=gdpPercap,color=country))+
   geom_point()+scale_y_log10()+geom_smooth(method="lm",se = FALSE)+
   theme(legend.position = 'None')
