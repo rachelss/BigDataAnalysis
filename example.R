@@ -68,10 +68,10 @@ ggplot(data = gm,aes(x=lifeExp,y=gdpPercap,color=country))+
 dev.off()
 
 #Split-Apply-Combine with dplyr
-gm %>% group_by(continent) %>% summarise(gdppercap =mean(gdpPercap)) %>%
-  ggplot(aes(x=continent,y=gdppercap))+geom_point()
+gm_sum <- gm %>% group_by(continent) %>% summarise(gdppercap =mean(gdpPercap))
+ggplot(gm_sum, aes(x=continent,y=gdppercap))+geom_point()
 
-gm %>% filter(year == 2007) %>%
+gm %>% filter(year == 2007) %>% #filter gm for 1997
   ggplot(aes(x=continent, y=gdpPercap*pop))+geom_point()
 
-
+filter(gm,year==2007)
