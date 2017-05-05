@@ -24,3 +24,7 @@ colnames(gm)
 rownames(gm)
 gm_copy<-gm
 colnames(gm_copy) <- c('a','b','c','d','e','f')
+gm[c(3,5),c(2,5)] #subset data - row 3 and 5 for col 2 and 5
+gm[c(3,5),]
+min(gm$lifeExp)
+max
