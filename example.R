@@ -32,3 +32,10 @@ min(gm[,5])
 colnames(gm)
 gm$gdp <- gm$pop * gm$gdpPercap
 
+ggplot(data = gm,aes(x=lifeExp,y=gdpPercap))+
+  geom_point()
+
+pdf("lifeexp_v_time.pdf",width=12,height=4)
+ggplot(data = gm,aes(x=year,y=lifeExp,color=continent))+
+  geom_point()
+dev.off()
