@@ -13,4 +13,5 @@ library(dplyr)
 #working with gapminder data - see gapminder.org
 #assign to variable named gm
 #from gapminder package the gapminder data
+#install.packages('gapminder')
 gm <- gapminder::gapminder
