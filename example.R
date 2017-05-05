@@ -78,6 +78,14 @@ filter(gm,year==2007)
 
 gm %>% select(country,year,pop) %>% head()
 gm %>% mutate(gdp = gdpPercap*pop) %>% head()
+#above same as below
+gm$gdp <- gm$gdpPercap*gm$pop
 
+##MODELS##
+ggplot(gm,aes(x=year,y=lifeExp))+
+  xlab("Year") + ylab("Life Expectancy")+
+  geom_point() + geom_smooth(method=lm)
 
+gm_model <- lm(lifeExp ~ year, data = gm)
+summary(gm_model)
 
