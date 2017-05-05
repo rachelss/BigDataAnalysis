@@ -47,6 +47,9 @@ p*x
 calc_cont_pop<-function(d,continent,year){
   sum(d[d$year == year & d$continent == continent,"pop"])
 }
+calc_cont_pop(gm,'Africa',1997)
+calc_cont_pop(gm,'Africa',1998)
+calc_cont_pop(gm,'Africa',1999)
 
 #plots
 pdf("lifeexp_v_time.pdf",width=12,height=4)
