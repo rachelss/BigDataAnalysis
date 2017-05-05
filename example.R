@@ -1,3 +1,6 @@
+#view this script at 
+#https://github.com/rachelss/BigDataAnalysis/blob/gh-pages/example.R
+
 #install.packages('curl')
 #install.packages('ggplot2')
 #install.packages('dplyr')
