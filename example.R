@@ -79,3 +79,5 @@ filter(gm,year==2007)
 gm %>% select(country,year,pop) %>% head()
 gm %>% mutate(gdp = gdpPercap*pop) %>% head()
 
+
+
