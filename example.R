@@ -15,3 +15,4 @@ library(dplyr)
 #from gapminder package the gapminder data
 #install.packages('gapminder')
 gm <- gapminder::gapminder
+head(gm)
