@@ -47,7 +47,7 @@ gm %>% group_by(continent) %>% summarise(gdppercap =mean(gdpPercap)) %>%
 
 gm %>% filter(year == myyear) %>% #filter gm for 1997
   ggplot(aes(x=continent, y=gdpPercap*pop))+geom_point()+
-  ylab(paste(GDP,myyear))
+  ylab(paste('GDP',myyear))
 
 #filter(gm,year==2007)
 
