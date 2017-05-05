@@ -12,6 +12,7 @@ library(dplyr)
 
 #from command command line
 myfilename <- commandArgs(trailingOnly = TRUE)[1]
+myyear <- commandArgs(trailingOnly = TRUE)[2]
 
 #working with gapminder data - see gapminder.org
 #assign to variable named gm
@@ -44,7 +45,7 @@ ggplot(data = gm,aes(x=lifeExp,y=gdpPercap,color=country))+
 gm %>% group_by(continent) %>% summarise(gdppercap =mean(gdpPercap)) %>%
   ggplot(aes(x=continent,y=gdppercap))+geom_point()
 
-gm %>% filter(year == 2007) %>% #filter gm for 1997
+gm %>% filter(year == myyear) %>% #filter gm for 1997
   ggplot(aes(x=continent, y=gdpPercap*pop))+geom_point()
 
 #filter(gm,year==2007)
@@ -53,6 +54,8 @@ gm %>% filter(year == 2007) %>% #filter gm for 1997
 #gm %>% mutate(gdp = gdpPercap*pop) %>% head()
 #above same as below
 #gm$gdp <- gm$gdpPercap*gm$pop
+
+
 
 ##MODELS##
 ggplot(gm,aes(x=year,y=lifeExp))+
