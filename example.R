@@ -10,6 +10,10 @@ library(curl)
 library(ggplot2)
 library(dplyr)
 
+#from command command line
+myfilename <- commandArgs()[1]
+print(myfilename)
+
 #working with gapminder data - see gapminder.org
 #assign to variable named gm
 #from gapminder package the gapminder data
